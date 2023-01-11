@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  gap: 10px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import Counter from './components/Counter';
+import NameGenerator from './components/NameGenerator';
+
+const LINK = {
+  ROOT_PATH : '/',
+  NAMES_PATH : '/names',
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+    <nav>
+      <NavLink to={LINK.ROOT_PATH}>Compteur</NavLink>
+      <NavLink to={LINK.NAMES_PATH}>Génerateur de noms</NavLink>
+    </nav>
+    <main>
+      <Routes>
+          <Route path={LINK.ROOT_PATH} element={<Counter />} />
+          <Route path={LINK.NAMES_PATH} element={<NameGenerator />} />
+      </Routes>
+    </main>
+  </>
 }
 
 export default App;
