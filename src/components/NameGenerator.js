@@ -37,7 +37,7 @@ const NameGenerator = () => {
             <div className="csv-container container">
                 <p>Nom, prenom, date, genre</p>
                 {persons.map((person) => (
-                    <p key={person.login.uuid}>{person.name.first + ',' + person.name.last + ',' + new Date(person.dob.date).toLocaleDateString() + ',' + (person.gender === 'fermale' ? 'Femme' : 'Homme')}</p>
+                    <p key={person.login.uuid}>{person.name.first + ',' + person.name.last + ',' + new Date(person.dob.date).toLocaleDateString() + ',' + (person.gender === 'female' ? 'Femme' : 'Homme')}</p>
                 ))}
             </div>
         )}
